@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Burner Man — Private Phones, Zero Exposure</title>
+  <title>Burner Man Co. — Private Phones, Zero Exposure</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
@@ -102,29 +102,20 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      font-size: 13px;
     }
 
     .nav-logo {
-      width: 26px;
       height: 26px;
-      border-radius: 8px;
-      background: radial-gradient(circle at 30% 20%, #ffffff 0, #f97316 40%, #7c2d12 100%);
-      box-shadow: 0 0 0 1px rgba(15, 17, 20, 0.18), 0 10px 25px rgba(15, 17, 20, 0.35);
-      position: relative;
-      overflow: hidden;
+      width: auto;
+      display: block;
     }
 
-    .nav-logo::after {
-      content: "";
-      position: absolute;
-      inset: 22% 22%;
-      border-radius: 6px;
-      border: 2px solid rgba(0, 0, 0, 0.35);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    .nav-brand-text {
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
     }
 
     .nav-links {
@@ -221,7 +212,7 @@
       margin: 0;
       color: var(--text-muted);
       font-size: 15px;
-      max-width: 560px;
+      max-width: 640px;
     }
 
     /* HERO */
@@ -579,6 +570,18 @@
       font-style: italic;
     }
 
+    /* WHY WE NEED */
+
+    .why-list {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
     /* HOW IT WORKS */
 
     .steps {
@@ -703,23 +706,32 @@
       border: 1px solid var(--border);
     }
 
-    .monero-qr {
+    .monero-qr-wrapper {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .monero-qr-img {
       width: 120px;
       height: 120px;
       border-radius: 8px;
-      background: repeating-linear-gradient(
-        45deg,
-        color-mix(in srgb, var(--accent-soft) 80%, transparent) 0,
-        color-mix(in srgb, var(--accent-soft) 80%, transparent) 4px,
-        transparent 4px,
-        transparent 8px
-      );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 11px;
       border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      object-fit: cover;
+    }
+
+    /* RECYCLING & USAGE */
+
+    .policy-list {
+      list-style: decimal;
+      padding-left: 20px;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
     }
 
     /* FAQ */
@@ -839,14 +851,17 @@
     <header class="nav">
       <div class="nav-inner">
         <div class="nav-brand">
-          <div class="nav-logo" aria-hidden="true"></div>
-          <span>Burner Man</span>
+          <img src="burnerman-logo.png" class="nav-logo" alt="Burner Man Co. logo">
+          <span class="nav-brand-text">BURNER MAN CO.</span>
         </div>
         <nav class="nav-links" aria-label="Primary">
           <a class="nav-link" href="#home">Home</a>
           <a class="nav-link" href="#how-it-works">How It Works</a>
           <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#why">Why</a>
           <a class="nav-link" href="#payment">Payment</a>
+          <a class="nav-link" href="#recycling">Recycling</a>
+          <a class="nav-link" href="#usage">Usage</a>
           <a class="nav-link" href="#faq">FAQ</a>
           <a class="nav-link" href="#contact">Contact</a>
         </nav>
@@ -870,7 +885,7 @@
             Private phones. Zero exposure. Total control.
           </h1>
           <p class="hero-subtitle">
-            Burner Man acquires, prepares, and optimizes smartphones so your communications stay unlinked to your identity —
+            Burner Man Co. acquires, prepares, and optimizes smartphones so your communications stay unlinked to your identity —
             legally, cleanly, and permanently.
           </p>
 
@@ -940,7 +955,7 @@
     <section id="features" class="section">
       <div class="section-inner">
         <header class="section-header">
-          <div class="section-kicker">What Burner Man does</div>
+          <div class="section-kicker">What Burner Man Co. does</div>
           <h2 class="section-title">A complete, end‑to‑end privacy service</h2>
           <p class="section-subtitle">
             From acquisition to recycling, every step is designed to keep your communications detached from your identity.
@@ -979,7 +994,7 @@
             <div class="feature-icon" aria-hidden="true">♻️</div>
             <h3 class="feature-title">Guaranteed recycling</h3>
             <p class="feature-body">
-              Each phone ships with a prepaid return box. When you’re done, send it back for proper recycling and compliant
+              Each phone ships with a prepaid return path. When you’re done, send it back for proper recycling and compliant
               disposal — no loose ends.
             </p>
           </article>
@@ -994,7 +1009,7 @@
           <div>
             <h2 class="trust-title">A privacy system engineered for zero attribution.</h2>
             <p class="trust-body">
-              Burner Man is not an app, a platform, or a cloud service. It’s a physical workflow designed so that no one —
+              Burner Man Co. is not an app, a platform, or a cloud service. It’s a physical workflow designed so that no one —
               including Burner Man — can meaningfully link you to the device you use.
             </p>
             <p class="trust-tagline">
@@ -1031,6 +1046,59 @@
       </div>
     </section>
 
+    <!-- WHY WE NEED BURNER MAN -->
+    <section id="why" class="section">
+      <div class="section-inner">
+        <header class="section-header">
+          <div class="section-kicker">Why this exists</div>
+          <h2 class="section-title">Why we need Burner Man Co.</h2>
+          <p class="section-subtitle">
+            Modern networks, platforms, and devices are built to observe, record, and correlate. Burner Man Co. exists to give
+            you a way to speak and research without that weight.
+          </p>
+        </header>
+
+        <ul class="why-list">
+          <li>
+            Internet traffic is routinely observable and recordable by providers and entities that buy or access that data,
+            including metadata about the tools you use to connect.
+          </li>
+          <li>
+            VPNs, while useful, still depend on infrastructure, logs, and operators that can be compromised, coerced, or
+            misconfigured.
+          </li>
+          <li>
+            “Private” messaging and calling platforms can be accessed under various legal and technical regimes; encryption
+            alone does not guarantee practical anonymity.
+          </li>
+          <li>
+            SIM swaps, public libraries, anonymizing browsers, and overlay networks all have their own identifiers and
+            weaknesses that can be correlated back to you.
+          </li>
+          <li>
+            Even end‑to‑end encrypted services can be targeted, infiltrated, or worked around at the device, network, or legal
+            layer.
+          </li>
+          <li>
+            Institutions increasingly seek visibility into communications and behavior, often in ways that erode the practical
+            right to private speech and anonymous inquiry.
+          </li>
+          <li>
+            Credit and risk scoring are drifting toward incorporating digital behavior, which risks tying your curiosity to
+            your financial life.
+          </li>
+          <li>
+            Without a way to think, search, and collaborate privately, creativity and innovation are chilled long before any
+            law is broken.
+          </li>
+          <li>
+            Burner Man Co. is not for malicious or criminal use. It is for people who believe that free thought, private
+            communications, and anonymous research are prerequisites for a healthy society.
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- HOW IT WORKS -->
     <section id="how-it-works" class="section">
       <div class="section-inner">
@@ -1055,7 +1123,8 @@
             <div class="step-label">Step 2</div>
             <h3 class="step-title">Device acquisition</h3>
             <p class="step-body">
-              Burner Man purchases your phone in person using his own payment methods — not yours.
+              Burner Man personally pre‑purchases a smartphone for you from point‑of‑sale distributors using his own payment
+              methods — not yours.
             </p>
           </article>
 
@@ -1063,16 +1132,17 @@
             <div class="step-label">Step 3</div>
             <h3 class="step-title">Privacy optimization</h3>
             <p class="step-body">
-              The device is stripped of unnecessary services, configured for VoIP, and charged. No personal accounts are
-              linked.
+              The device is stripped of bloatware and non‑communication software, configured for VoIP, and charged. No personal
+              accounts are linked.
             </p>
           </article>
 
           <article class="step-card">
             <div class="step-label">Step 4</div>
-            <h3 class="step-title">Discreet delivery</h3>
+            <h3 class="step-title">Service &amp; setup</h3>
             <p class="step-body">
-              Your phone is shipped directly to you. No digital record is kept beyond what the carrier requires.
+              Temporary accounts are created solely for your use, mobile data is applied, and all credentials are provided to
+              you on a separate paper — never copied or retained.
             </p>
           </article>
 
@@ -1080,7 +1150,8 @@
             <div class="step-label">Step 5</div>
             <h3 class="step-title">Use anywhere</h3>
             <p class="step-body">
-              Connect over Wi‑Fi or use the included global data. The phone exists for your speech, not your identity.
+              Connect over Wi‑Fi or use the included global data. The phone exists for your speech, not your identity, for as
+              long as you choose to keep it.
             </p>
           </article>
 
@@ -1088,7 +1159,8 @@
             <div class="step-label">Step 6</div>
             <h3 class="step-title">Return &amp; recycle</h3>
             <p class="step-body">
-              When you’re done, place the phone in the prepaid return box. It’s recycled — not resold, not repurposed.
+              When you’re done, place the phone in the provided return path. It’s recycled in compliance with applicable laws —
+              not resold, not repurposed.
             </p>
           </article>
         </div>
@@ -1102,7 +1174,7 @@
           <div class="section-kicker">Payment &amp; ordering</div>
           <h2 class="section-title">Choose how you want to transact</h2>
           <p class="section-subtitle">
-            Burner Man supports both conventional and privacy‑preserving payment methods. You decide what fits your threat
+            Burner Man Co. supports both conventional and privacy‑preserving payment methods. You decide what fits your threat
             model.
           </p>
         </header>
@@ -1112,7 +1184,7 @@
             <div class="payment-tag">Primary checkout</div>
             <h3 class="feature-title" style="margin-top: 6px;">Credit / debit via Square</h3>
             <p class="payment-note">
-              Use a standard card through Square’s secure checkout. Burner Man does not see or store your card details.
+              Use a standard card through Square’s secure checkout. Burner Man Co. does not see or store your card details.
             </p>
             <a
               class="btn btn-primary btn-pill"
@@ -1137,13 +1209,11 @@
           <div class="monero-card">
             <div class="monero-label">Monero (XMR)</div>
             <p class="payment-note">
-              For users who require a fully privacy‑preserving payment rail, Burner Man accepts Monero. Include your shipping
-              details in an encrypted message or agreed channel.
+              For users who require a fully privacy‑preserving payment rail, Burner Man Co. accepts Monero. Include your
+              shipping details in an agreed secure channel.
             </p>
-            <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
-              <div class="monero-qr">
-                QR code placeholder
-              </div>
+            <div class="monero-qr-wrapper">
+              <img src="monero-qr.png" alt="Monero payment QR code" class="monero-qr-img">
               <div style="flex:1; min-width:180px;">
                 <div style="font-size:12px; margin-bottom:4px; font-weight:500;">Monero address</div>
                 <div class="monero-address">
@@ -1151,8 +1221,81 @@
                 </div>
               </div>
             </div>
+            <p class="payment-note">
+              Monero offers low‑fee, privacy‑focused payments. Combined with Burner Man’s phone anonymizing process, it adds
+              another layer of protection to your communications.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- RECYCLING POLICY -->
+    <section id="recycling" class="section">
+      <div class="section-inner">
+        <header class="section-header">
+          <div class="section-kicker">Recycling</div>
+          <h2 class="section-title">How Burner Man’s recycling policy works</h2>
+          <p class="section-subtitle">
+            Phones are meant to be temporary tools, not permanent liabilities. The recycling policy closes the loop for both
+            privacy and the environment.
+          </p>
+        </header>
+
+        <ol class="policy-list">
+          <li>
+            Every still‑functioning Burner Man phone is recyclable directly with Burner Man Co. Email your client number and a
+            request to recycle, and you’ll receive a prepaid label for a small return package.
+          </li>
+          <li>
+            If the returned phone is in good working condition, the email address you provide can receive a discount on a future
+            purchase. The only record kept is the email and its corresponding discount, and only until it is redeemed.
+          </li>
+          <li>
+            Working phones are reset, wiped with current software, and returned to the anonymizing pool so that no previous
+            user’s data is accessible.
+          </li>
+          <li>
+            Non‑functioning phones, or phones not originally purchased from Burner Man Co., can still be recycled on your
+            behalf in accordance with applicable laws. Intact devices may still qualify you for a smaller discount.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- USAGE RECOMMENDATIONS -->
+    <section id="usage" class="section">
+      <div class="section-inner">
+        <header class="section-header">
+          <div class="section-kicker">Usage</div>
+          <h2 class="section-title">Private‑communication usage recommendations</h2>
+          <p class="section-subtitle">
+            To keep your communications as private as the system is designed to allow, Burner Man Co. recommends treating each
+            phone as a temporary, compartmentalized tool.
+          </p>
+        </header>
+
+        <ol class="policy-list">
+          <li>
+            Do not contact people who know you by voice or who are contacts on any device or account that can be associated with
+            you. If you must, ensure they are also using a phone obtained through Burner Man Co.
+          </li>
+          <li>
+            Do not use the phone at locations or over Wi‑Fi that can be directly or indirectly associated with you.
+          </li>
+          <li>
+            Do not download content or sign into services that can be tied back to your identity now or later.
+          </li>
+          <li>
+            Do not retain any particular phone for more than one month; two weeks is better. Even if the included data is
+            exhausted, avoid using the same device indefinitely over Wi‑Fi. Return it and, if needed, obtain another.
+          </li>
+        </ol>
+        <p class="section-subtitle" style="margin-top:18px;">
+          Failing to follow these recommendations does not automatically make your communications non‑private, but it weakens the
+          guarantees. Burner Man Co. provides a strong anonymizing layer, but all digital communications are recordable; the
+          only way for them to remain truly private is for them not to be associable with you at all.
+        </p>
       </div>
     </section>
 
@@ -1163,32 +1306,56 @@
           <div class="section-kicker">FAQ</div>
           <h2 class="section-title">Common questions, clear answers</h2>
           <p class="section-subtitle">
-            If you’re thinking carefully about operational privacy, you should be. These are the questions Burner Man expects.
+            If you’re thinking carefully about operational privacy, you should be. These are the questions Burner Man Co.
+            expects.
           </p>
         </header>
 
         <div class="faq-list">
           <article class="faq-item">
+            <h3 class="faq-q">Who is Burner Man?</h3>
+            <p class="faq-a">
+              Burner Man is your personal shopper and privacy engineer for smartphones. He pre‑purchases a device on your
+              behalf, optimizes it for private communications, sets up temporary accounts and service, fully charges it, and
+              ensures it can be recycled — all while retaining no personal information beyond transaction amounts and anonymous
+              client numbers.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3 class="faq-q">What does Burner Man actually do, and why?</h3>
+            <p class="faq-a">
+              Burner Man Co. exists to stand between you and the records that would normally tie a phone to your identity. By
+              handling acquisition, optimization, account setup, service application, and recycling, Burner Man removes the
+              usual financial, surveillance, and account‑based links that make phones traceable. The goal is to restore a
+              practical right to private communications and anonymous research.
+            </p>
+          </article>
+
+          <article class="faq-item">
             <h3 class="faq-q">Is this legal?</h3>
             <p class="faq-a">
-              Yes. Burner Man purchases and configures devices. You use them. There is nothing inherently illegal about
-              acquiring or using a phone that is not tied to your identity. How you use it is your responsibility.
+              Yes. Burner Man Co. purchases and configures devices; you use them. There is nothing inherently illegal about
+              acquiring or using a phone that is not tied to your identity. How you use it is your responsibility, and the
+              service is not intended for malicious or criminal activity.
             </p>
           </article>
 
           <article class="faq-item">
             <h3 class="faq-q">Do you store any of my information?</h3>
             <p class="faq-a">
-              No. Burner Man does not maintain a CRM, analytics profile, or customer database. No logs are kept beyond what
-              payment processors and carriers require for their own compliance.
+              Burner Man Co. does not maintain a CRM, analytics profile, or customer database. Only the monetary amount of a
+              transaction is logged for tax compliance. Shipping information and other order details are deleted and purged once
+              they are no longer operationally necessary.
             </p>
           </article>
 
           <article class="faq-item">
             <h3 class="faq-q">What kind of phones do you use?</h3>
             <p class="faq-a">
-              Modern, reliable smartphones capable of running VoIP applications and global data. Exact models may vary based
-              on availability, but all are tested and configured for privacy‑focused use.
+              Modern, reliable smartphones capable of running VoIP applications and global data. Exact models may vary based on
+              availability, and some devices may show cosmetic wear, but all are tested and configured for privacy‑focused use
+              and proper recycling at end of life.
             </p>
           </article>
 
@@ -1196,23 +1363,52 @@
             <h3 class="faq-q">How long does delivery take?</h3>
             <p class="faq-a">
               Typical turnaround is 1–3 business days depending on inventory and shipping distance. If timing is critical,
-              mention it when you order and Burner Man will confirm feasibility.
+              mention it when you order and Burner Man Co. will confirm what is feasible.
             </p>
           </article>
 
           <article class="faq-item">
             <h3 class="faq-q">Can I reuse the phone for multiple operations?</h3>
             <p class="faq-a">
-              You can, but the design philosophy assumes each phone is temporary. When you’re done, returning it for recycling
-              reduces the risk surface and closes the loop.
+              You can, but the design philosophy assumes each phone is temporary. The faster you use a particular phone and
+              recycle it, the more private your communications remain. Returning devices for recycling reduces your risk surface
+              and closes the loop.
             </p>
           </article>
 
           <article class="faq-item">
             <h3 class="faq-q">What if I lose the phone?</h3>
             <p class="faq-a">
-              Operationally, that’s preferable to losing a phone tied to your identity. There is no account or profile for
-              Burner Man to “reset” — the device simply ceases to be part of your workflow.
+              Operationally, that is preferable to losing a phone tied to your identity. There is no account or profile for
+              Burner Man Co. to reset; the device simply ceases to be part of your workflow. The design assumes devices may be
+              lost or destroyed without compromising your identity.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3 class="faq-q">How does the client number system work?</h3>
+            <p class="faq-a">
+              Each order is assigned a random client number. That number is used to coordinate logistics and recycling, not to
+              build a profile. No personal information is attached to it beyond what is strictly necessary to complete the
+              transaction and shipping, and that information is purged once it is no longer needed.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3 class="faq-q">What service plans are available?</h3>
+            <p class="faq-a">
+              Phones are typically provisioned with 30 days of U.S. service with unlimited calls and texts and a data allotment,
+              or 30 days of U.S. plus international service to many countries with a different data allotment. If you need more
+              time or data, you can email for current options and pricing.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3 class="faq-q">Do you offer automatic renewals?</h3>
+            <p class="faq-a">
+              The system is designed to support recurring use with new devices at intervals such as 1, 2, or 4 weeks. This keeps
+              each phone’s lifespan short and its attribution risk low. Contact Burner Man Co. to discuss renewal intervals that
+              match your operational needs.
             </p>
           </article>
         </div>
@@ -1224,7 +1420,7 @@
       <div class="section-inner">
         <header class="section-header">
           <div class="section-kicker">Contact</div>
-          <h2 class="section-title">Reach Burner Man</h2>
+          <h2 class="section-title">Reach Burner Man Co.</h2>
           <p class="section-subtitle">
             Use the channel that makes the most sense for you. Expect concise, operationally focused communication.
           </p>
@@ -1244,19 +1440,19 @@
               </a>
             </div>
             <div>
-              <strong>Monero:</strong> See payment section above for address and QR placeholder.
+              <strong>Monero:</strong> See payment section above for address and QR code.
             </div>
           </div>
 
           <div class="contact-card">
             <div><strong>Recycling &amp; compliance</strong></div>
             <div>
-              Each device ships with a prepaid return box. When you’re finished, returning the phone ensures it is recycled
-              rather than resold, reducing both environmental impact and attribution risk.
+              Each device can be returned for recycling in accordance with applicable laws. This reduces environmental impact
+              and ensures devices are not resold or repurposed in ways that could reintroduce attribution risk.
             </div>
             <div>
-              Burner Man does not operate as a carrier, MVNO, or app provider. This is a physical service focused on
-              acquisition, preparation, and disposal.
+              Burner Man Co. does not operate as a carrier, MVNO, or app provider. It is a physical service focused on
+              acquisition, preparation, and disposal of devices for private communications.
             </div>
           </div>
         </div>
@@ -1266,7 +1462,7 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-inner">
-        <div>© <span id="year"></span> Burner Man. All rights reserved.</div>
+        <div>© <span id="year"></span> Burner Man Co. All rights reserved.</div>
         <div class="footer-links">
           <span>Operational privacy service.</span>
           <span>Phones acquired, prepared, and recycled.</span>
